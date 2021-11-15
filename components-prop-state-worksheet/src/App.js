@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+//Exercise 1
+state = {
+    firstName: 'Reggie',
+    lastName: 'White'
+}
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +24,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className = "container">
+        <DisplayName />
+
+      </div>
     </div>
   );
 }
