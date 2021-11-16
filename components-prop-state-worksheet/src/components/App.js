@@ -4,6 +4,7 @@ import './App.css';
 // import NameList from './NameList/NameList';
 import AlertUser from './AlertUser/AlertUser';
 import SuperheroTable from './SuperheroTable/SuperheroTable';
+import SuperheroCreateForm from './SuperheroCreateForm/SuperheroCreateForm';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends Component {
         {/* <NameList names={this.state.names} /> */}
         <AlertUser handleClick = {this.handleClick} />
         <SuperheroTable superHeroes = {this.state.superheroes}/>
+        <SuperheroCreateForm superheroes = {this.state.superheroes} />
       </div>
      );
   }; 
