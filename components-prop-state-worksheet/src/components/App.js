@@ -38,6 +38,12 @@ class App extends Component {
     alert('devCodeCamp')
   }
 
+  addSuperhero = (newSuperhero) => {
+    this.setState({
+      superheroes: superheroes.push(newSuperhero),
+    });
+  }
+
   render() { 
     return ( 
       <div className="container-fluid">
@@ -46,7 +52,7 @@ class App extends Component {
         {/* <NameList names={this.state.names} /> */}
         <AlertUser handleClick = {this.handleClick} />
         <SuperheroTable superHeroes = {this.state.superheroes}/>
-        <SuperheroCreateForm superheroes = {this.state.superheroes} />
+        <SuperheroCreateForm superheroes = {this.state.superheroes} addSuperhero = {this.addSuperhero}/>
       </div>
      );
   }; 
