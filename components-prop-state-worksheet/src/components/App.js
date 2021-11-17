@@ -33,15 +33,23 @@ class App extends Component {
       ]
     }
   }
-
+  
   handleClick() {
     alert('devCodeCamp')
   }
 
   addSuperhero = (newSuperhero) => {
+    let newHero = {
+      superheroId: this.state.superheroes.length + 1,
+      name: newSuperhero.name,
+      primaryAbility: newSuperhero.primaryAbility,
+      secondarAbility: newSuperhero.secondarAbility
+    }
+  
     this.setState({
-      superheroes: superheroes.push(newSuperhero),
-    });
+      superheroes: [...this.state.superheroes, newHero]
+    }, ()=>console.log(this.state.superheroes));
+    
   }
 
   render() { 

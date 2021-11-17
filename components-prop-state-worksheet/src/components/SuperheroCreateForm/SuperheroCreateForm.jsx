@@ -7,7 +7,7 @@ class SuperheroCreateForm extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-                superheroId: this.props.superheroes.length + 1,
+                superheroId:"",
                 name: "",
                 primaryAbility: "",
                 secondarAbility: "",
